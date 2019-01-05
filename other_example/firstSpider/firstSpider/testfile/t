@@ -1,0 +1,61 @@
+insert into cwprince (tag, product_name, product_id, price, savings, retail_price, shipping_time_indicator,
+                       outOfStock_abs, front_image_url, front_image_path, url, url_object)
+            VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+
+
+cursor.execute(insert_sql, (item["tag"], item["product_name"], item["product_id"], item["price"], item["savings"],
+                            item["retail_price"], item["shipping_time_indicator"], item["outOfStock_abs"],
+                            item["front_image_url"], item["front_image_path"], item["url"], item["url_object"]))
+
+
+    tag = scrapy.Field()
+    #产品名称
+    product_name = scrapy.Field()
+    #产品ID
+    product_id = scrapy.Field()
+    #产品价格
+    price = scrapy.Field()
+    #节省费用
+    savings = scrapy.Field()
+    #零售价
+    retail_price = scrapy.Field()
+    #到货时间
+    shipping_time_indicator = scrapy.Field()
+    #缺货时描述
+    outOfStock_abs = scrapy.Field()
+    #产品图片url地址
+    front_image_url = scrapy.Field()
+    #产品图片的本地地址
+    front_image_path = scrapy.Field()
+    #当前url
+    url = scrapy.Field()
+    #对当前url进行md5转换，作为主键
+    url_object = scrapy.Field()
+
+
+
+
+['/shop-online/542/fragrances'
+'/shop-online/81/vitamins'
+'/shop-online/257/beauty'
+'/shop-online/665/skin-care'
+ '/shop-online/648/cosmetics'
+  '/shop-online/517/weight-loss'
+   '/shop-online/20/baby-care'
+    '/shop-online/89/sexual-health'
+     '/shop-online/198/smoking-deterrents'
+      '/shop-online/3240/clearance',
+       '/prescriptions',
+       '/shop-online/258/medicines',
+        '/shop-online/1093/cold-flu',
+        '/shop-online/PS-1755/all-fish-oil-supplements',
+        '/shop-online/159/oral-hygiene-and-dental-care',
+        '/shop-online/792/household',
+        '/shop-online/129/hair-care',
+        '/shop-online/1255/sports-nutrition',
+         '/bestsellers',
+         '/categories',
+         'https://www.chemistwarehouse.hk',
+         '/', '#', '/login', '/youraccount', '#', '/aboutus', '/aboutus/shipping',
+         '/shop-online/542/fragrances',
+         '/shop-online/81/vitamins', '/shop-online/257/beauty', '/shop-online/665/skin-care', '/shop-online/648/cosmetics', '/shop-online/517/weight-loss', '/shop-online/20/baby-care', '/shop-online/89/sexual-health', '/shop-online/198/smoking-deterrents', '/prescriptions', '/shop-online/258/medicines', '/shop-online/1093/cold-flu', '/shop-online/PS-1755/all-fish-oil-supplements', '/shop-online/159/oral-hygiene-and-dental-care', '/shop-online/792/household', '/shop-online/129/hair-care', '/shop-online/1255/sports-nutrition', '/bestsellers', '/shop-online/3240/clearance', '/categories']
