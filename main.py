@@ -4,7 +4,7 @@ from scrapy.cmdline import execute
 
 import sys
 import os
-#import time
+import time
 
 
 
